@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/HZOA/!svn/ver/41/OrderAssistant/SDWebImage.framework/Versions/A/Headers
+END
+SDWebImageCompat.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/HZOA/!svn/ver/41/OrderAssistant/SDWebImage.framework/Versions/A/Headers/SDWebImageCompat.h
+END
+SDImageCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/HZOA/!svn/ver/41/OrderAssistant/SDWebImage.framework/Versions/A/Headers/SDImageCache.h
+END
+SDWebImageDecoder.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/HZOA/!svn/ver/41/OrderAssistant/SDWebImage.framework/Versions/A/Headers/SDWebImageDecoder.h
+END
+SDWebImageManagerDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/HZOA/!svn/ver/41/OrderAssistant/SDWebImage.framework/Versions/A/Headers/SDWebImageManagerDelegate.h
+END
+SDWebImagePrefetcher.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/HZOA/!svn/ver/41/OrderAssistant/SDWebImage.framework/Versions/A/Headers/SDWebImagePrefetcher.h
+END
+SDWebImageDownloaderDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/HZOA/!svn/ver/41/OrderAssistant/SDWebImage.framework/Versions/A/Headers/SDWebImageDownloaderDelegate.h
+END
+SDWebImageManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/HZOA/!svn/ver/41/OrderAssistant/SDWebImage.framework/Versions/A/Headers/SDWebImageManager.h
+END
+SDWebImageDownloader.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/HZOA/!svn/ver/41/OrderAssistant/SDWebImage.framework/Versions/A/Headers/SDWebImageDownloader.h
+END
+UIButton+WebCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/HZOA/!svn/ver/41/OrderAssistant/SDWebImage.framework/Versions/A/Headers/UIButton+WebCache.h
+END
+SDImageCacheDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/HZOA/!svn/ver/41/OrderAssistant/SDWebImage.framework/Versions/A/Headers/SDImageCacheDelegate.h
+END
+UIImageView+WebCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/HZOA/!svn/ver/41/OrderAssistant/SDWebImage.framework/Versions/A/Headers/UIImageView+WebCache.h
+END

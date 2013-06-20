@@ -1,0 +1,27 @@
+//
+// Prefix header for all source files of the 'OrderAssistant' target in the 'OrderAssistant' project
+//
+
+#import <Availability.h>
+
+//#define WEBSERVICE_ADDRESS @"http://www.0519517.com/services/"
+#define WEBSERVICE_ADDRESS @"http://10.1.2.110:8080/services/"
+#define KEY_USERID_CCODE @"com.czuft.orderassistant.useridpsd"
+#define KEY_CCODE @"com.czuft.orderassistant.ccode"
+#define KEY_USERID @"com.czuft.orderassistant.userid"
+#define KEY_PASSWORD @"com.czuft.orderassistant.password"
+#define KEY_DEVICETOKEN @"com.czuft.orderassistant.deviceToken"
+#define KEY_APPCODE @"com.czuft.orderassistant.appcode"
+#define KEY_AGREEMENT @"com.czuft.orderassistant.agreement"
+#define WEBSITE_URL @"http://www.0519517.com"
+#define WEBSERVICE_ADDRESS_TEST @"http://10.1.2.110:8080/services/"
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "UserKeychain.h"
+#endif
