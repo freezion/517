@@ -158,22 +158,23 @@
 - (NSMutableArray *) listToPage:(NSArray *) dataList {
     NSMutableArray *retList = [[NSMutableArray alloc] init];
     NSMutableArray *rowList = nil;
-    for (int i = 0; i < [dataList count]; i ++) {
-        if ((i % 9) > 0) {
-            [rowList addObject:[dataList objectAtIndex:i]];
-            if (i == ([dataList count] - 1)) {
-                [retList addObject:rowList];
-            }
-        } else {
-            if (i > 0) {
-                [retList addObject:rowList];
-            }
-            rowList = [[NSMutableArray alloc] init];
-            [rowList addObject:[dataList objectAtIndex:i]];
-            if (i == 0) {
-                [retList addObject:rowList];
+    if ([dataList count] > 1) {
+        for (int i = 0; i < [dataList count]; i ++) {
+            if ((i % 9) > 0) {
+                [rowList addObject:[dataList objectAtIndex:i]];
+                if (i == ([dataList count] - 1)) {
+                    [retList addObject:rowList];
+                }
+            } else {
+                if (i > 0) {
+                    [retList addObject:rowList];
+                }
+                rowList = [[NSMutableArray alloc] init];
+                [rowList addObject:[dataList objectAtIndex:i]];
             }
         }
+    } else {
+        [retList addObject:dataList];
     }
     return retList;
 }
