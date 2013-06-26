@@ -74,22 +74,22 @@ BMKMapManager *_mapManager;
     NSString *savedVerStr = [[NSUserDefaults standardUserDefaults] objectForKey:@"SAVED_VERSION"];
     
     //版本号相等取反  即为第一次或者升级后的情况
-    if (![savedVerStr isEqualToString:currentAppVer]) {
-        UIStoryboard *storyborad = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-        GuideViewController *guideViewController= [storyborad instantiateViewControllerWithIdentifier:@"GuideViewController"];
-//        self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//        [self.window addSubview:guideViewController.view];
-        if (iphone5) {
-            guideViewController.view.frame = CGRectMake(0, 20, 320, 568);
-            guideViewController.guideImageView.frame = CGRectMake(0, 0, 320, 568);
-            guideViewController.guideScrollView.frame = CGRectMake(0, 0, 320, 568);
-        }else{
-            guideViewController.view.frame = CGRectMake(0, 20, 320, 460);
-        }
-        self.window.rootViewController=guideViewController;
-        //保存该版本号
-        [[NSUserDefaults standardUserDefaults] setObject:currentAppVer forKey:@"SAVED_VERSION"];
-    }
+//    if (![savedVerStr isEqualToString:currentAppVer]) {
+//        UIStoryboard *storyborad = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+//        GuideViewController *guideViewController= [storyborad instantiateViewControllerWithIdentifier:@"GuideViewController"];
+////        self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+////        [self.window addSubview:guideViewController.view];
+//        if (iphone5) {
+//            guideViewController.view.frame = CGRectMake(0, 20, 320, 568);
+//            guideViewController.guideImageView.frame = CGRectMake(0, 0, 320, 568);
+//            guideViewController.guideScrollView.frame = CGRectMake(0, 0, 320, 568);
+//        }else{
+//            guideViewController.view.frame = CGRectMake(0, 20, 320, 460);
+//        }
+//        self.window.rootViewController=guideViewController;
+//        //保存该版本号
+//        [[NSUserDefaults standardUserDefaults] setObject:currentAppVer forKey:@"SAVED_VERSION"];
+//    }
     
     NSString *docsDir;
     NSArray *dirPaths;
