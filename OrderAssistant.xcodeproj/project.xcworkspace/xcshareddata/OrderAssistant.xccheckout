@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B985D45A-429F-4B65-BD03-2D681214D0FE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OrderAssistant</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9635B7AE-BD39-48B9-B998-EBB5C23C7E54</key>
+		<string>https://github.com/freezion/517.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OrderAssistant.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9635B7AE-BD39-48B9-B998-EBB5C23C7E54</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/freezion/517.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9635B7AE-BD39-48B9-B998-EBB5C23C7E54</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9635B7AE-BD39-48B9-B998-EBB5C23C7E54</string>
+			<key>IDESourceControlWCCName</key>
+			<string>517</string>
+		</dict>
+	</array>
+</dict>
+</plist>
