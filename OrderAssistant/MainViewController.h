@@ -55,6 +55,7 @@
 @property (nonatomic, retain) IBOutlet UIButton *scanButton;
 @property (nonatomic) int shopCode;
 @property (nonatomic, retain) IBOutlet UIButton *recommendButton;
+@property (nonatomic, retain) IBOutlet UIView *dashboardView;
 
 @property (nonatomic) BOOL expanding;
 @property (nonatomic, retain) CLLocationManager *locationManager;
@@ -68,6 +69,7 @@
 
 @property (nonatomic, retain) IBOutlet UIButton *collectionButton;
 @property (nonatomic, retain) IBOutlet UIButton *aboutButton;
+@property (nonatomic, retain) IBOutlet UIImageView *dashLogoView;
 
 //- (IBAction)menuButton:(id)sender;
 -(void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender;

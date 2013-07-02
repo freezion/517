@@ -60,6 +60,8 @@
 @synthesize codeArray;
 @synthesize collectionButton;
 @synthesize aboutButton;
+@synthesize dashboardView;
+@synthesize dashLogoView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -73,11 +75,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if ([UIScreen mainScreen].bounds.size.height == 480.0) {
+        [self.dashboardView setFrame:CGRectMake(10, 10, 301, 396)];
+    } else {
+        UIImage *buttonImage = [UIImage imageNamed:@"dash_logo.png"];
+        self.dashLogoView.image = buttonImage;
+        self.dashLogoView.frame = CGRectMake(10, 10, 301, 80);
+        //[self.view addSubview:dashboardView];
+        [self.dashboardView setFrame:CGRectMake(10, 96, 301, 396)];
+    }
     
     deviceTokenNum=((AppDelegate *)[[UIApplication sharedApplication] delegate]).deviceTokenNum;
 
 	// Do any additional setup after loading the view.
-    self.navigationController.navigationBar.topItem.title = @"唔要吃 － 常州站";
+    self.navigationController.navigationBar.topItem.title = @"唔要吃";
     UIImage *buttonImage = [[UIImage imageNamed:@"main_queryview_btn_bg.png"] stretchableImageWithLeftCapWidth:5 topCapHeight:0];
     UIImage *buttonPressedImage = [[UIImage imageNamed:@"main_queryview_btn_bg.png"] stretchableImageWithLeftCapWidth:5 topCapHeight:0];
     [topButton setBackgroundImage:buttonImage forState:UIControlStateNormal];

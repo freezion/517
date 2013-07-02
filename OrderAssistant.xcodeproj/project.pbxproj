@@ -90,6 +90,7 @@
 		33BFC3211782983C00C35806 /* stream_encoder_framing.c in Sources */ = {isa = PBXBuildFile; fileRef = 33BFC2EF1782983C00C35806 /* stream_encoder_framing.c */; };
 		33BFC3221782983C00C35806 /* window.c in Sources */ = {isa = PBXBuildFile; fileRef = 33BFC2F01782983C00C35806 /* window.c */; };
 		33BFC3231782983C00C35806 /* MeterTable.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33BFC2F21782983C00C35806 /* MeterTable.mm */; };
+		33BFC3251782A6E700C35806 /* dash_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 33BFC3241782A6D200C35806 /* dash_logo.png */; };
 		33C9EE1716A3E3EA0065D065 /* lottery_cellBg_hall_focus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C9EE1316A3E3EA0065D065 /* lottery_cellBg_hall_focus@2x.png */; };
 		33C9EE1816A3E3EA0065D065 /* navigationbar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C9EE1416A3E3EA0065D065 /* navigationbar_bg.png */; };
 		33C9EE1916A3E3EA0065D065 /* navigationbar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C9EE1516A3E3EA0065D065 /* navigationbar_bg@2x.png */; };
@@ -595,6 +596,7 @@
 		33BFC2F01782983C00C35806 /* window.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = window.c; sourceTree = "<group>"; };
 		33BFC2F11782983C00C35806 /* MeterTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterTable.h; sourceTree = "<group>"; };
 		33BFC2F21782983C00C35806 /* MeterTable.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MeterTable.mm; sourceTree = "<group>"; };
+		33BFC3241782A6D200C35806 /* dash_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash_logo.png; sourceTree = "<group>"; };
 		33C9EE1316A3E3EA0065D065 /* lottery_cellBg_hall_focus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lottery_cellBg_hall_focus@2x.png"; sourceTree = "<group>"; };
 		33C9EE1416A3E3EA0065D065 /* navigationbar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationbar_bg.png; sourceTree = "<group>"; };
 		33C9EE1516A3E3EA0065D065 /* navigationbar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_bg@2x.png"; sourceTree = "<group>"; };
@@ -1478,6 +1480,7 @@
 		E693E70D164CFCCF00F1D967 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				33BFC3241782A6D200C35806 /* dash_logo.png */,
 				33BC257B17818A81003B2F9A /* searchInput.png */,
 				33BC257C17818A84003B2F9A /* searchInput@2x.png */,
 				33BC257D17818A87003B2F9A /* uploading_icon_style1.png */,
@@ -2301,6 +2304,7 @@
 				33BFC31C1782983C00C35806 /* Makefile.in in Resources */,
 				33BFC31D1782983C00C35806 /* Makefile.am in Resources */,
 				33BFC31E1782983C00C35806 /* Makefile.in in Resources */,
+				33BFC3251782A6E700C35806 /* dash_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
