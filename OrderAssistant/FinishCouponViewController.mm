@@ -21,6 +21,9 @@
 
 @synthesize pageTotalNum;
 @synthesize camFlag;
+@synthesize userTel;
+@synthesize scanNum;
+@synthesize imageTel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,7 +40,7 @@
 	// Do any additional setup after loading the view.
     NSMutableDictionary *usernamepasswordKVPairs = (NSMutableDictionary *)[UserKeychain load:KEY_USERID_CCODE];
     NSString *ccode = [usernamepasswordKVPairs objectForKey:KEY_CCODE];
-    
+    self.listData = [ShopCouponModel scandList:ccode];
     self.contentList = [self listToPage:[ShopCouponModel scandList:ccode]];
     NSUInteger numberPages = self.contentList.count;
     
@@ -70,6 +73,10 @@
     [self loadScrollViewWithPage:1];
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    [self.notify hide];
+}
+
 - (void) viewDidAppear:(BOOL)animated {
     UIButton *appBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     UIImage *buttonImage = [[UIImage imageNamed:@"trip_bar_right"] resizableImageWithCapInsets:UIEdgeInsetsMake(4, 4, 4, 4)];
@@ -84,6 +91,13 @@
     [appBtn addTarget:self action:@selector(showRecive) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *buttonBar = [[UIBarButtonItem alloc] initWithCustomView:appBtn];
     [self.tabBarController.navigationItem setRightBarButtonItem:buttonBar];
+    NSMutableDictionary *usernamepasswordKVPairs = (NSMutableDictionary *)[UserKeychain load:KEY_USERID_CCODE];
+    if ([self.listData count] > 0) {
+        CGRect CGfour = CGRectMake(0.0, 100, self.view.frame.size.width, 40);
+        self.notify = [[JSNotifier alloc]initWithTitle:[NSString stringWithFormat:@"Tel: %@      扫码总数: %d", [usernamepasswordKVPairs objectForKey:KEY_USERID], [self.listData count]]];
+        self.notify.frame = CGfour;
+        [self.notify show];
+    }
 }
 
 - (void) dismissSelf:(PersonalViewController *) viewController withFlag:(NSString *) flag {
@@ -117,7 +131,7 @@
     }
 }
 
-- (void) showCamera {
+- (void) showCamera{
     NSMutableDictionary *usernamepasswordKVPairs = (NSMutableDictionary *)[UserKeychain load:KEY_USERID_CCODE];
     NSString *userName = [usernamepasswordKVPairs objectForKey:KEY_USERID];
     if (userName) {
