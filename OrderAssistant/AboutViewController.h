@@ -16,6 +16,7 @@
 
 @property (nonatomic, retain) IBOutlet UILabel *versionLbl;
 @property (nonatomic, retain) IBOutlet UIButton *exitButton;
+@property (nonatomic, retain) IBOutlet UITableViewCell *exitCell;
 
 - (IBAction)exitPress:(id)sender;
 

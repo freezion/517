@@ -11,14 +11,12 @@
 @implementation AboutViewController
 @synthesize versionLbl;
 @synthesize exitButton;
-
+@synthesize exitCell;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.navigationItem.title=@"关于我们";
-    
-    [self backgroundTurnRedForButton:exitButton];
 
     //获取当前版本
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
@@ -37,19 +35,14 @@
     [backBtn addTarget:self action:@selector(turnBack) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *backBarButton = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     [self.navigationItem setLeftBarButtonItem:backBarButton];
-}
-
-- (void)backgroundTurnRedForButton:(UIButton *)button {
-    CGSize size = button.frame.size;
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
-    view.layer.cornerRadius = 6;
-    view.clipsToBounds = true;
-    view.backgroundColor = [UIColor redColor];
-    UIGraphicsBeginImageContext(size);
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *screenImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    [button setBackgroundImage:screenImage forState:UIControlStateNormal];
+    
+    exitCell.backgroundView = [[UIView alloc] initWithFrame:CGRectZero];
+    [exitButton setBackgroundImage:[[UIImage imageNamed:@"RedBigBtn"] stretchableImageWithLeftCapWidth:10 topCapHeight:0]
+                        forState:UIControlStateNormal];
+    [exitButton setBackgroundImage:[[UIImage imageNamed:@"RedBtnHighlight"] stretchableImageWithLeftCapWidth:10 topCapHeight:0]
+                          forState:UIControlStateHighlighted];
+    
+    
 }
 
 - (void)turnBack{
@@ -58,7 +51,7 @@
 
 - (IBAction)exitPress:(id)sender{
     UIActionSheet *picActionSheet=[[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"退出登录" otherButtonTitles: nil];
-	picActionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+	picActionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
     picActionSheet.tag=1;
 	[picActionSheet showInView:self.view.window];
 }

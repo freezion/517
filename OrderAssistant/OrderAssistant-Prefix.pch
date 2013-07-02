@@ -25,3 +25,6 @@
     #import <Foundation/Foundation.h>
     #import "UserKeychain.h"
 #endif
+
+#define HEIGHT [UIScreen mainScreen].bounds.size.height//获取屏幕高度
+#define imageNamed(name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:nil]])

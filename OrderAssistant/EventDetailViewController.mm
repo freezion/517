@@ -41,7 +41,9 @@
     }
     return self;
 }
-
+//iphone/ZXingWidget/Classes
+//cpp/core/src
+// /usr/include/libxml2
 - (void)viewDidLoad
 {
     [super viewDidLoad];

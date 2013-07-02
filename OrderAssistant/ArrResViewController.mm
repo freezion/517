@@ -88,6 +88,7 @@
 @synthesize subPickDateCodeArray;
 
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -262,7 +263,7 @@
         
         shopType=((AppDelegate *)[[UIApplication sharedApplication] delegate]).shopCode;
         if ([shopType isEqualToString:@"1"]) {
-            [HUD setLabelText:@"定位中..."];
+            [HUD setLabelText:@"获取当前位置..."];
             [HUD showWhileExecuting:@selector(getShop) onTarget:self withObject:nil animated:YES];
         }else{
             //button.hidden=YES;

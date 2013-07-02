@@ -172,7 +172,7 @@
             telThree=[array objectAtIndex:2];
         }
         UIActionSheet *telActionSheet=[[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:telOne,telTwo,telThree,nil];
-        telActionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+        telActionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
         telActionSheet.tag=5;
         [telActionSheet showInView:self.view.window];
     }
@@ -206,7 +206,7 @@
 - (void)showTelOrderAction
 {
     UIActionSheet *telActionSheet=[[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"点击预定", @"电话预定", nil];
-    telActionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+    telActionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
     telActionSheet.tag=1;
 	[telActionSheet showInView:self.view.window];    
 }
@@ -214,7 +214,7 @@
 - (void)showPictureAction
 {
     UIActionSheet *picActionSheet=[[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照传图", @"手机传图", nil];
-	picActionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+	picActionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
     picActionSheet.tag=2;
 	[picActionSheet showInView:self.view.window]; 
 }
