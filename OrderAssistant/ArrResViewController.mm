@@ -86,7 +86,8 @@
 @synthesize dicPicker;
 @synthesize pickDateCodeArray;
 @synthesize subPickDateCodeArray;
-
+@synthesize txtSearchKey;
+@synthesize btnVoice;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -102,9 +103,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-        
-    self.tabBarController.navigationItem.rightBarButtonItem = [self createRightItemWithImage:@"trip_bar_right" target:self Selector:@selector(searchBtn:)];
+    [self.btnVoice addTarget:self.txtSearchKey action:@selector(voiceMode) forControlEvents:UIControlEventTouchUpInside];
+    self.txtSearchKey.delegate = self;
+    //self.tabBarController.navigationItem.rightBarButtonItem = [self createRightItemWithImage:@"trip_bar_right" target:self Selector:@selector(searchBtn:)];
 
     
     self.navigationItem.title=@"餐厅";
@@ -154,6 +155,20 @@
 //    [distancebutton addTarget:self action:@selector(showAction_menu) forControlEvents:UIControlEventTouchUpInside];
 //    [self.view addSubview:distancebutton];
    
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.txtSearchKey textMode];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField;
+{
+    if (!(txtSearchKey.text==nil||[@"" isEqualToString:txtSearchKey.text])){
+        resentities = [WebServices getShopsBySDName:txtSearchKey.text];
+        [self.tableviewCustom reloadData];
+    }
+    // Try to find next responder
+    return NO; // We do not want UITextField to insert line-breaks.
 }
 
 -(void)searchBtn:(id)sender{
@@ -649,7 +664,7 @@
         cell.resSdAreaLbl.text=resEntity.resSdArea;
         //cell.resImgView.image=[CommonUtil getImageFromURL:resEntity.resImg];
         [cell.resImgView setImageWithURL:[NSURL URLWithString:[WEBSITE_URL stringByAppendingString:resEntity.resImg]]
-                       placeholderImage:[UIImage imageNamed:@"loading_throbber_icon"]];
+                       placeholderImage:[UIImage imageNamed:@"sns_my_pic"]];
         cell.loadMoreLbl.text = @"";
         //cell末尾箭头指示
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

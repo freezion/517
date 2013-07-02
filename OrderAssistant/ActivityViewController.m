@@ -54,7 +54,7 @@
     cell.eventName.text=activityEntity.eventName;
     cell.eventPrice.text=activityEntity.eventPrice;
     [cell.imageUrl setImageWithURL:[NSURL URLWithString:[WEBSITE_URL stringByAppendingString:activityEntity.imageUrl]]
-               placeholderImage:[UIImage imageNamed:@"loading_throbber_icon"]];
+               placeholderImage:[UIImage imageNamed:@"sns_my_pic"]];
     
     return cell;
     

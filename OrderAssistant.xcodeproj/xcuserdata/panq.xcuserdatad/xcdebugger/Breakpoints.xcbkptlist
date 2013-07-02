@@ -17,19 +17,6 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "OrderAssistant/PersonalInformationViewController.mm"
-         timestampString = "387345332.32636"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "159"
-         endingLineNumber = "159"
-         landmarkName = "-tableView:didSelectRowAtIndexPath:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"

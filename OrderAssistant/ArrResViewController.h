@@ -18,9 +18,10 @@
 //#import "EGORefreshTableHeaderView.h"
 #import "AreaEntity.h"
 #import "CookStyleEntity.h"
+#import "VoiceTextField.h"
 
 
-@interface ArrResViewController : ViewController<UITableViewDataSource,UITableViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIActionSheetDelegate,PopoverViewDelegate,CLLocationManagerDelegate,MKMapViewDelegate, UITabBarControllerDelegate, UITabBarDelegate, MBProgressHUDDelegate,RegisterViewDelegate>{
+@interface ArrResViewController : ViewController<UITableViewDataSource,UITableViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIActionSheetDelegate,PopoverViewDelegate,CLLocationManagerDelegate,MKMapViewDelegate, UITabBarControllerDelegate, UITabBarDelegate, MBProgressHUDDelegate,RegisterViewDelegate, UITextFieldDelegate>{
    
 
     ResCell  *rescell;
@@ -117,6 +118,8 @@
 @property (nonatomic, retain) ResEntity *resEntity;
 @property (nonatomic, retain) NSMutableArray *resentities;
 @property (nonatomic, retain) IBOutlet UITableView *tableviewCustom;
+@property (nonatomic, retain) IBOutlet VoiceTextField *txtSearchKey;
+@property (nonatomic, retain) IBOutlet UIButton *btnVoice;
 
 //@property (nonatomic, retain) NSArray *myPickerData1;
 //@property (nonatomic, retain) NSArray *myPickerData2;
