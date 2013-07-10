@@ -162,6 +162,7 @@
                     <navigationItem key="navigationItem" id="TJw-XC-RHc"/>
                     <connections>
                         <outlet property="exitButton" destination="a5m-Ku-rjB" id="sXm-U7-exq"/>
+                        <outlet property="exitCell" destination="yg9-sC-Mal" id="VQF-3T-3gl"/>
                         <outlet property="versionLbl" destination="zMm-u4-acM" id="vcF-BJ-0Jk"/>
                     </connections>
                 </tableViewController>
@@ -3790,8 +3791,11 @@
         <class className="FinishCouponViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FinishCouponViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="imageTel" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="scanNum" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="userTel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="FinishDetailViewController" superclassName="UIViewController">
